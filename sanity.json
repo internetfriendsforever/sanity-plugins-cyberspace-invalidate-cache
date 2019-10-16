@@ -1,7 +1,7 @@
 {
   "parts": [
     {
-      "name": "part:@sanity/dashboard/widget/cyberspace-invalidate-cache",
+      "name": "part:@sanity/dashboard/widget/sanity-plugins-cyberspace-invalidate-cache",
       "implements": "part:@sanity/dashboard/widget",
       "path": "index.js"
     }
