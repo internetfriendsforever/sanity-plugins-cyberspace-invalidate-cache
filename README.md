@@ -7,6 +7,8 @@ Sanity part name `part:@sanity/dashboard/widget/sanity-plugins-cyberspace-invali
 
 For now you can add this repo as a git submodule `<your-sanity-project>/plugins/cyberspace-invalidate-cache`
 
+You will need to add the plugin as `sanity-plugins-cyberspace-invalidate-cache` to the `plugins` list in your projects `sanity.json`
+
 To enable the plugin, add it to `widgets` in your project's dashboard configuration, and change the `base_url` option to your site's url:
 
 ```
