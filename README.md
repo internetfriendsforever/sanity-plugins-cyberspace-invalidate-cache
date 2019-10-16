@@ -1,4 +1,4 @@
-# cyberspace-invalidate-cache
+# sanity-plugins-cyberspace-invalidate-cache
 
 This is a Sanity dashboard plugin, you need to have the @sanity/dashboard installed. See https://www.sanity.io/docs/dashboard for details.
 You should now have a dashboard configuration file that points to a file like `dashboardConfig.js`
