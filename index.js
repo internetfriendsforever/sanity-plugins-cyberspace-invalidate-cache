@@ -86,6 +86,6 @@ class InvalidateCache extends React.Component {
 }
 
 export default {
-  name: 'cyberspace-invalidate-cache',
+  name: 'sanity-plugins-cyberspace-invalidate-cache',
   component: InvalidateCache
 }
