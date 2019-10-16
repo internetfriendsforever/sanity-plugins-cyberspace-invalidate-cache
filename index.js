@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import getIt from 'get-it'
-import jsonResponse from 'get-it/lib/middleware/jsonResponse'
 import promise from 'get-it/lib/middleware/promise'
 import Button from 'part:@sanity/components/buttons/default'
 
 import styles from './invalidator.css'
 
-const request = getIt([promise(), jsonResponse()])
+const request = getIt([promise()])
 
 class InvalidateCache extends React.Component {
   state = {
