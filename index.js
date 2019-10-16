@@ -47,13 +47,24 @@ class InvalidateCache extends React.Component {
     const { error, invalidating, success, successMessage } = this.state
     const { base_url } = this.props
 
+    if (!base_url) {
+      return (
+        <div className={styles.container}>
+          <header className={styles.header}>
+            <h2 className={styles.title}>Publish</h2>
+            <p>You need to configure the plugin with a <code>base_url</code> <code>option</code>. See repository homepage https://github.com/internetfriendsforever/sanity-plugins-cyberspace-invalidate-cache.</p>
+          </header>
+        </div>
+      )
+    }
+    
     return (
       <div className={styles.container}>
         <header className={styles.header}>
           <h2 className={styles.title}>Publish</h2>
         </header>
         <div className={styles.containerWithPadding}>
-          <p>Publish your site by invalidating the cloudfront cache.</p>
+          <p>Publish { base_url } by invalidating the cloudfront cache.</p>
           {invalidating && (
             <Fragment>
               <progress /> invalidating…
