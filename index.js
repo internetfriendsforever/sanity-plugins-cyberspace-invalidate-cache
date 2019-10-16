@@ -8,7 +8,6 @@ import Button from 'part:@sanity/components/buttons/default'
 import styles from './invalidator.css'
 
 const request = getIt([promise(), jsonResponse()])
-const base_url = 'https://sesong.info'
 
 class InvalidateCache extends React.Component {
   state = {
@@ -24,7 +23,7 @@ class InvalidateCache extends React.Component {
     })
 
     request({
-      url: `${base_url}/invalidate`,
+      url: `${this.props.base_url}/invalidate`,
       body: '',
       method: 'POST'
     })
@@ -36,7 +35,6 @@ class InvalidateCache extends React.Component {
         })
       })
       .catch(error => {
-        console.log(error)
         this.setState({
           error,
           invalidating: false,
@@ -48,6 +46,7 @@ class InvalidateCache extends React.Component {
 
   render() {
     const { error, invalidating, success, successMessage } = this.state
+    const { base_url } = this.props
 
     return (
       <div className={styles.container}>
